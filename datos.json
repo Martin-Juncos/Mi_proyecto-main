@@ -1,0 +1,52 @@
+[
+  {
+    "Nombre": "ChatGPT",
+    "Categoria": "Texto / Asistente",
+    "Descripcion": "Generación de texto y chat conversacional",
+    "Creador": "OpenAI",
+    "ModeloBase": "GPT-4",
+    "TipoAcceso": "Registro requerido",
+    "Precio": "Freemium",
+    "SitioWeb": "https://openai.com"
+  },
+  {
+    "Nombre": "MidJourney",
+    "Categoria": "Imágenes / Creatividad",
+    "Descripcion": "Generación de imágenes artísticas a partir de texto",
+    "Creador": "MidJourney Inc.",
+    "ModeloBase": "Propietario",
+    "TipoAcceso": "Discord",
+    "Precio": "Pago mensual",
+    "SitioWeb": "https://midjourney.com"
+  },
+  {
+    "Nombre": "DALL·E",
+    "Categoria": "Imágenes / Creatividad",
+    "Descripcion": "Creación de imágenes a partir de texto",
+    "Creador": "OpenAI",
+    "ModeloBase": "DALL·E 3",
+    "TipoAcceso": "Registro requerido",
+    "Precio": "Freemium",
+    "SitioWeb": "https://openai.com/dall-e"
+  },
+  {
+    "Nombre": "Runway ML",
+    "Categoria": "Vídeo / Edición",
+    "Descripcion": "Edición y generación de vídeo con IA",
+    "Creador": "Runway",
+    "ModeloBase": "Varios modelos",
+    "TipoAcceso": "Registro requerido",
+    "Precio": "Pago",
+    "SitioWeb": "https://runwayml.com"
+  },
+  {
+    "Nombre": "Jasper AI",
+    "Categoria": "Marketing / Texto",
+    "Descripcion": "Redacción de contenido para marketing",
+    "Creador": "Jasper",
+    "ModeloBase": "GPT-4 + propios",
+    "TipoAcceso": "Registro requerido",
+    "Precio": "Pago",
+    "SitioWeb": "https://jasper.ai"
+  }
+]

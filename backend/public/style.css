@@ -1,0 +1,437 @@
+/* ========================================= */
+/* Estilos generales y base (para ambos HTML) */
+/* ========================================= */
+
+body {
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.contenedor {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    flex-grow: 1;
+}
+
+footer, .pie-pagina {
+    background-color: #eeeeee;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+p {
+    margin-bottom: 1em;
+    color: #555;
+    line-height: 1.8;
+}
+
+strong {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+em {
+    font-style: italic;
+    color: #777;
+}
+
+/* Estilos de Lista (ambos HTML) */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2em;
+}
+
+ul li {
+    margin-bottom: 0.8em;
+    padding-left: 1.8em;
+    position: relative;
+    font-size: 1.05em;
+}
+
+ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #7a1212; /* Color general de bullet */
+    font-size: 1.2em;
+    line-height: 1;
+}
+
+/* Estilos del Botón "enviar" (ambos HTML) */
+.enviar {
+    padding: 10px 20px;
+    background-color: #af4c4c;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none; /* Añadido para enlaces */
+}
+
+.enviar:hover {
+    background-color: #893a3a;
+}
+
+/* ========================================= */
+/* Estilos Específicos de index.html */
+/* ========================================= */
+
+.titulo-principal {
+    text-align: center;
+    margin-bottom: 1.5em;
+    font-size: 2.8em;
+    color: #1a2a47;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+    padding-bottom: 0.5em;
+    border-bottom: 3px solid #3498db;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.subtitulo-seccion {
+    font-size: 1.5em; /* Original de index.html */
+    color: #2c3e50;
+    margin-top: 2.5em;
+    margin-bottom: 1em;
+    position: relative;
+    padding-left: 40px;
+}
+
+/* Iconografía para subtítulos de index.html (se mantiene la estructura) */
+
+.subtitulo-seccion::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 4px;
+    background-color: #3498db;
+    border-radius: 2px;
+}
+/* Se sobrescribe el ::before general para el estilo específico de "Y vos?" */
+.icono-vos::after {
+    content: '📝';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+}
+.icono-vos::before {
+    content: none; /* Elimina la línea azul del estilo general h2 */
+}
+
+/* Estilos de Tags de index.html */
+.tag {
+    background-color: #efd5d5; /* Color del index.html */
+    color: #000000;
+    padding: 0.3em 0.7em;
+    border-radius: 7px;
+    font-size: 0.95em;
+    margin-right: 0.6em;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilo del Resultado de index.html */
+p em.resultado {
+    display: block;
+    background-color: #e6ffe6;
+    border-left: 5px solid #28a745;
+    padding: 10px 15px;
+    margin-top: 1.5em;
+    margin-bottom: 2.5em;
+    border-radius: 5px;
+    color: #28a745;
+    font-weight: bold;
+    font-style: normal;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilos para el formulario de sugerencias de index.html (Manteniendo el estilo original del style.css) */
+h2 + div {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 1.8em;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+#input-sugerencia {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    flex-grow: 1;
+    font-size: 1.05em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#input-sugerencia:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.2);
+    outline: none;
+}
+
+.btn-agregar {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.05em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-agregar:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+#contenedor-sugerencias {
+    margin-top: 1.5em;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.sugerencia {
+    background-color: #fefefe;
+    padding: 12px 15px;
+    margin-bottom: 0.8em;
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sugerencia:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.sugerencia span {
+    flex-grow: 1;
+    color: #444;
+    font-size: 1.1em;
+}
+
+.sugerencia button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-left: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sugerencia button:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+/* ========================================= */
+/* Estilos Específicos de sobre-mi.html */
+/* ========================================= */
+
+.contenedor-principal {
+    max-width: 800px; /* Ancho específico para sobre-mi.html */
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Se mantiene el estilo de sombra del index */
+    border-radius: 12px; /* Se mantiene el estilo de borde del index */
+    padding: 20px;
+}
+
+/* Encabezado fijo de sobre-mi.html */
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c61a1a;
+    padding: 10px 20px;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.encabezado-izquierda,
+.encabezado-derecha {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.encabezado-centro {
+    flex: 2;
+    text-align: center;
+}
+
+.encabezado-derecha {
+    padding-right: 2%;
+}
+
+.boton-menu {
+    padding: 5px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.boton-menu img {
+    height: 20px;
+}
+
+.encabezado-centro .titulo-seccion { /* Titulo H1 dentro del encabezado */
+    margin: 0;
+    font-size: 24px;
+    color: white; /* Color blanco para el encabezado fijo */
+}
+
+.buscador {
+    margin-left: auto;
+    display: flex;
+    gap: 5px;
+}
+
+.buscador input {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.buscador button {
+    padding: 5px 10px;
+    border: none;
+    background-color: white;
+    color: #c61a1a;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Perfil y Mascotas */
+
+.foto-perfil {
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.foto-perfil:hover {
+    transform: rotate(2deg) scale(1.10);
+}
+
+.imagen-mascota {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.imagen-mascota:hover {
+    transform: scale(1.10);
+}
+
+.articulo-proyecto {
+    background-color: #ffffff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(132, 19, 19, 0.697);
+}
+
+.parrafo-proyecto, .nombre-mascota {
+    caption-side: top;
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.6; /* Ajuste para coherencia */
+}
+
+.contenedor-mascotas {
+    overflow: auto;
+}
+
+.enlace-clima {
+    display: inline-block;
+}
+.icono-clima {
+    width:50px; 
+    height:50px; 
+    border:none; 
+    cursor:pointer;
+}
+
+.mapa-ubicacion {
+    border: 1px solid #ccc; /* Se agrega borde visible al mapa */
+    max-width: 100%;
+    height: auto;
+}
+
+.boton-volver {
+    margin-top: 20px;
+}
+
+/* Se ajusta el H2 de sobre-mi.html para diferenciarlo de index.html, pero con la misma tipografía */
+.titulo-seccion {
+    font-size: 2em; /* Estilo del h2 general del style.css */
+    color: #2c3e50;
+    margin-top: 2.5em;
+    margin-bottom: 1em;
+    position: relative;
+    padding-left: 40px;
+}
+
+/* Se mantiene el estilo de la linea azul de H2 en sobre-mi.html */
+.titulo-seccion::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 4px;
+    background-color: #3498db;
+    border-radius: 2px;
+}
+
+.subtitulo-proyecto { /* Para H3 de sobre-mi.html */
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #c61a1a;
+}
